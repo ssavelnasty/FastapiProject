@@ -1,17 +1,15 @@
 from typing import Optional
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException # pylint: disable=import-error
+from pydantic import BaseModel # pylint: disable=import-error
 
-from pydantic import BaseModel # pylint: disable=no-name-in-module
+from fastapi import FastAPI, Request # pylint: disable=import-error
+from fastapi.responses import HTMLResponse # pylint: disable=import-error
+from fastapi.staticfiles import StaticFiles # pylint: disable=import-error
+from fastapi.templating import Jinja2Templates # pylint: disable=import-error
 
-from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
-
-
-from fastapi.exception_handlers import http_exception_handler
-from starlette.exceptions import HTTPException as StarletteHTTPException
+from fastapi.exception_handlers import http_exception_handler # pylint: disable=import-error
+from starlette.exceptions import HTTPException as StarletteHTTPException # pylint: disable=import-error
 
 app = FastAPI()
 
